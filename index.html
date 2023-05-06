@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.8/aframe/build/aframe-ar.js"></script>
+    <body style='margin: 0px; overflow: hidden;'>
+    <a-scene embedded arjs="debugUIEnabled:false">
+        <a-marker preset="hiro">
+            <a-box position='0 0.5 0' material='color: red;'></a-box>
+            <a-icosahedron position='0 1 0' color="#FF926B" radius="0.5"></a-icosahedron>
+            <a-cylinder color="crimson" height="2" radius="0.5" position='0 -0.5 0'></a-cylinder>
+        </a-marker>
+        <a-marker preset="kanji">
+            <a-box position='0 0.5 0' material='color: blue;'></a-box>
+            <a-ring position='0 -0.5 0' color="teal" radius-inner="1" radius-outer="2"></a-ring>
+            <a-torus-knot position='0 1 0' color="#B84A39" arc="180" p="3" q="5" radius="0.5" radius-tubular="0.1"></a-torus-knot>
+        </a-marker>
+        <a-marker type='pattern' url='pattern-horbatiuk.patt'>
+            <a-torus position='0 0.5 0' color="#43A367" arc="270" radius="0.5" radius-tubular="0.1"></a-torus>
+            <a-sphere position='0 1 0' color="yellow" radius="0.5"></a-sphere>
+            <a-dodecahedron position='0 -0.5 0' color="#FF926B" radius="1"></a-dodecahedron>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
